@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A K Biplob</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+<div class="hero">
+  <div class="calender">
+    <div class="left">
+      <p id="date">01</p>
+      <p id="day">Sunday</p>
+    </div>
+    <div class="right">
+      <p id="month">January</p>
+      <p id="year">2020</p>
+    </div>
+  </div>
+</div>
+
+ <script>
+
+const date = document.getElementById('date');
+const day = document.getElementById('day');
+const month = document.getElementById('month');
+const year = document.getElementById('year');
+
+const today = new Date();
+
+const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Tursday', 'Friday', 'Saturday'];
+const allmonths = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September',
+  'october', 'November', 'December'];
+
+date.innerHTML = (today.getDate()<10? '0':'') + today.getDate();
+day.innerHTML = weekDays[today.getDay()];
+month.innerHTML = allMonths[today.getMonth()];
+year.innerHTML = today.getFullYear();
+
+
+ </script> 
+</body>
+</html>
